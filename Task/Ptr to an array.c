@@ -2,12 +2,11 @@
 #include<stdio.h>
 int main()
 {
-	int a[5]={10.20,30,40,50};
+	int a[5],b,*ptr;
 	int i;
-	int *ptr;
-	
+	printf("Enter value");
+	scanf("%d",&b);
 	ptr=a;
-	
 	for(i=0;i<5;i++)
 	{
 		printf("Value of a[%d]:%d\n",i,*ptr);
