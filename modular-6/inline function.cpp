@@ -1,28 +1,30 @@
-// Write a program tofind the multiplication values and cubic values using inline function.
+// Write a program o find multiplication value and cubic value using inline function.
 
 #include<iostream>
 using namespace std;
 
-class line{
+class value{
 	public:
-		inline float mul(float a, float b)
+		inline int multi(int a, int b)
 		{
 			return(a*b);
+			
 		}
-		inline float cube(float a)
+		inline int cube(int a)
 		{
 			return(a*a*a);
 		}
 };
 int main()
 {
-	line obj;
-	float val1,val2;
-	cout<<"Enter two values";
-	cin>>val1>>val2;
-	cout<<"\nMultiplication value is"<<obj.mul(val1,val2);
-	cout<<"\n\nCube value is:"<<obj.cube(val1)<<"\t"<<obj.cube(val2);
+	value v;
+	
+	int a,b;
+	
+	cout<<"Ennter two values:";
+	cin>>a>>b;
+	cout<<"\nMultiplication value is: "<<v.multi(a,b);
+	cout<<"\nCubic value is: "<<v.cube(a);
 	
 	return 0;
-	
 }
