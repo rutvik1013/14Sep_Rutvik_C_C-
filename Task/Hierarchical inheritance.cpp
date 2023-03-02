@@ -1,65 +1,66 @@
-// Write a program on heirarichical inharitance.
+// Wrie a program to find  addotion,Substraction of two numbers  using hierarchical inharitance.
 
 #include<iostream>
 using namespace std;
 
-class Calc
-
-{
+class audit{
 	public:
 		int a,b;
 		void getdata()
 		{
-			cout<<"\nEnter value of a and b:\n";
+			cout<<endl<<"Enter Two Numbers: "<<endl;
 			cin>>a>>b;
-		}		
-};
-class A: public Calc
-{
-	public:
-		void sum()
-		{
-			cout<<"\nSum= " <<a+b;
 		}
 };
-class B: public Calc
-{
+class A: public audit{
 	public:
-		void sub()
+	void sum()
+	{
+		cout<<"Addition: "<<a+b<<endl;
+		
+	}
+};
+class B: public audit{
+	public:
+	void sub()
+	{
+		cout<<"Substraction: "<<a-b<<endl;
+	}
+};
+class C: public audit{
+	public:
+		void multi()
 		{
-			cout<<"\nSubstraction= " <<a-b;
+			cout<<"Multiplication: "<<a*b<<endl;
+			
 		}
 };
-class C: public Calc
-{
+class D: public audit{
 	public:
-		void product()
+		void div()
 		{
-			cout<<"\nProduct= " <<a*b;
-		}
-};
-class D: public Calc
-{
-	public:
-		void division()
-		{
-			cout<<"\nDivision="<<a/b;
+			cout<<"Division: "<<a/b<<endl;
+			
 		}
 };
 int main()
 {
-	Calc obj;
-	A obj1;
-	B obj2;
-	C obj3;
-	D obj4;
+	A a1;
+	B b1;
+	C c1;
+	D d1;
 	
-	obj1.getdata();
-	obj1.sum();
-	obj2.sub();
-	obj3.product();
-	obj4.division();
+	a1.getdata();
+	a1.sum();
+	
+	b1.getdata();
+	b1.sub();
+	
+	c1.getdata();
+	c1.multi();
+	
+	d1.getdata();
+	d1.div();
 	
 	return 0;
 }
-
